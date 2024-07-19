@@ -4,8 +4,6 @@ public static class Keypad
 {
     static Dictionary<char, string> keypad = new Dictionary<char, string>
     {
-        {'0', " "},
-        {'1', "&,("},
         {'2', "ABC"},
         {'3', "DEF"},
         {'4', "GHI"},
@@ -64,5 +62,11 @@ public static class Keypad
         return message;
     }
 
-    
+  
+
+    public static bool IsValidInput(string input)
+    {
+        string pattern = @"^[2-9]+(?:\s*\**|\**\s*|[2-9]+)*#$";
+        return Regex.IsMatch(input, pattern) ? true : false;
+    }
 }
