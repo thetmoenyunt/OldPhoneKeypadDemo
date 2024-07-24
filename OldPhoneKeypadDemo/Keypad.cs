@@ -1,7 +1,13 @@
 ﻿using System.Text.RegularExpressions;
 
+/// <summary>
+/// This class performs convertion of old phone key pad numbers to related alphabetical letters with input validation.
+/// </summary>
 public static class Keypad
 {
+    /// <summary>
+    /// Mapping of digits to corresponding letters on an old phone keypad
+    /// </summary>
     static Dictionary<char, string> keypad = new Dictionary<char, string>
     {
         {'2', "ABC"},
@@ -14,7 +20,11 @@ public static class Keypad
         {'9', "WXYZ"}
     };
 
-
+    /// <summary>
+    /// This method will convert from numeric keys to alphabetic letters
+    /// </summary>
+    /// <param name="input">numeric keys sequence</param>
+    /// <returns>Related alphabetic letters of input keys sequence</returns>
     public static string OldPhonePad(string input)
     {
         string message = "";
@@ -62,8 +72,13 @@ public static class Keypad
         return message;
     }
 
-  
 
+    /// <summary>
+    /// Input validation 
+    /// The valid input is the combination of numbers [2-9], zero or more space, zero or more '*' and '#' at the end.
+    /// </summary>
+    /// <param name="input">The input string to be validated.</param>
+    /// <returns>Boolean value whether the input is valid or not</returns>
     public static bool IsValidInput(string input)
     {
         string pattern = @"^[2-9]+(?:\s*\**|\**\s*|[2-9]+)*#$";
