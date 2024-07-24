@@ -50,7 +50,7 @@ public static class Keypad
 
             if (message.Length > 0 && Regex.IsMatch(message, "#$"))
             {
-                message = message.Remove(message.Length - 1, 1);
+                message = message.Remove(message.Length - 1, 1).Replace(" ", "");
             }
 
         }

@@ -4,7 +4,7 @@ namespace OldPhoneKeypadDemo.Tests
     {
         [Theory]
         [InlineData("227*#", "B")]
-        [InlineData("8 88777444666*664#", "T URING")]
+        [InlineData("8 88777444666*664#", "TURING")]
         [InlineData("77778866333555666933777#", "SUNFLOWER")]
         public void OldPhonePadTest(string input, string expected)
         {
