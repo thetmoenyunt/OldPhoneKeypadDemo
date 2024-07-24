@@ -18,9 +18,9 @@ Input will be valided as per below RegEx Pattern.
 - ^[2-9]+   starting with one or more number between 2-9
 - (?:)*     matches everything enclosed
 - \s*       zero or more space
-- \**       zero or more '*'
+- \**       zero or more '*' character
 - [2-9]+    one or more numbers between 2-9.
-- #$        '#' at the end of input
+- #$        '#' character at the end of input
 
 
 ## Running Tests
@@ -35,7 +35,10 @@ To run tests, run the following command
 
 
 ## Limitation
-The limitation is you must key in with space to separate if you key in to same numbers for subsequence letters, otherwise I could lead confusion of keys counts. E.g: If you want to send "HELLO" by using this app, you have to give inputs as "4433555 555666#". So, actual output would be "HEL LO". 
+The limitation is that you need to add spaces to separate consecutive identical numeric keys to convert them into the correct letters; otherwise, it could lead to confusion in counting the keys. For example, if you want to send 'HELLO' using this app, you need to input '4433555 555666#'. This way, '555' is recognized as 'L'.
+
+## Screenshot
+![console-screenshot](https://github.com/user-attachments/assets/87bd2ca4-ee3d-4ef3-8da2-63678ff306c3)
 
 
 
