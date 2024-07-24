@@ -35,7 +35,7 @@ To run tests, run the following command
 
 
 ## Limitation
-The limitation is you have to add space to separate subsequence same numeric keys to convert the correct letters, otherwise it could lead confusion of keys counts. E.g: If you want to send "HELLO" by using this app, you have to give inputs as "4433555 555666#". So that, can be considered 555 is "L". 
+The limitation is that you need to add spaces to separate consecutive identical numeric keys to convert them into the correct letters; otherwise, it could lead to confusion in counting the keys. For example, if you want to send 'HELLO' using this app, you need to input '4433555 555666#'. This way, '555' is recognized as 'L'.
 
 ## Screenshot
 ![console-screenshot](https://github.com/user-attachments/assets/87bd2ca4-ee3d-4ef3-8da2-63678ff306c3)
